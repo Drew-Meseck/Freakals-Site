@@ -1,6 +1,3 @@
-from src.core.utils.collector import deep_update
-from src.core.utils.settings import get_settings_from_environment
-
 """
 This takes env variables with a matching prefix, strips out the prefix, and adds it to global
 
@@ -11,5 +8,9 @@ could then be referenced as a global as:
 IN_DOCKER with a value of True
 """
 
+from src.core.utils.collector import deep_update
+from src.core.utils.settings import get_settings_from_environment
+
 # globals() is a dictionary of global variables
-deep_update(globals(), get_settings_from_environment(ENVAR_SETTINGS_PREFIX))  # type: ignore # noqa:F821
+deep_update(globals(), get_settings_from_environment(
+    ENVAR_SETTINGS_PREFIX))  # type: ignore # noqa:F821

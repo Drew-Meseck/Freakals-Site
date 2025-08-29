@@ -10,9 +10,13 @@ repos:
     rev: v6.0.0
     hooks:
       - id: trailing-whitespace
-      - id: end-of-file-fixer
-      - id: check-yaml
+      - id: check-docstring-first
       - id: check-added-large-files
+      - id: check-yaml
+      - id: debug-statements
+      - id: check-merge-conflict
+      - id: double-quote-string-fixer
+      - id: end-of-file-fixer
 
   - repo: https://github.com/PyCQA/flake8
     rev: 7.3.0
@@ -30,3 +34,13 @@ repos:
     hooks:
       - id: mypy
         additional_dependencies: [types-requests, types-PyYAML, types-toml]
+
+  - repo: https://github.com/google/yapf
+    rev: "v0.43.0"
+    hooks:
+      - id: yapf
+        name: yapf
+        language: python
+        entry: yapf
+        args: [-i]
+        types: [python]
