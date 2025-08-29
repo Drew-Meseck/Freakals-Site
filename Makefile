@@ -16,7 +16,7 @@ migragions:
 
 .PHONY: createsuperuser
 createsuperuser:
-	poetry run python -m src.manage createsuperuser	
+	poetry run python -m src.manage createsuperuser
 
 .PHONY: test
 test:

@@ -1,4 +1,4 @@
-from src.core.utils.collections import deep_update
+from src.core.utils.collector import deep_update
 from src.core.utils.settings import get_settings_from_environment
 
 """

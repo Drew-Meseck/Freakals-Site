@@ -1,7 +1,7 @@
 DEBUG = False
 SECRET_KEY = NotImplemented
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
