@@ -24,3 +24,7 @@ test:
 
 .PHONY: update
 update: install migrate ;
+
+.PHONY: lint
+lint:
+	poetry run pre-commit run --all-files
