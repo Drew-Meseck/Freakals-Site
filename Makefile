@@ -28,3 +28,13 @@ update: install migrate ;
 .PHONY: lint
 lint:
 	poetry run pre-commit run --all-files
+
+.PHONY: up-dependencies-lin
+up-dependencies-lin:
+	test -f .env || touch .env
+	docker compose -f docker-compose.dev.yml up --force-reacreate db
+
+.PHONY: up-dependencies-win
+up-dependencies-win:
+	if not exist .env type nul > .env
+	docker compose -f docker-compose.dev.yml up --force-recreate db

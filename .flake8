@@ -1,5 +1,5 @@
 [flake8]
-ignore = C101,A005
+ignore = C101,A005,I201
 exclude =
     **/migrations/*,
     .git,

@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 
 # Namespacing our own custom environment variables
 
-ENVAR_SETTINGS_PREFIX = 'FREAKSETTINGS_'
+ENVAR_SETTINGS_PREFIX = 'FREAK_SETTINGS_'
 
 LOCAL_SETTINGS_PATH = os.getenv(f'{ENVAR_SETTINGS_PREFIX}LOCAL_SETTINGS_PATH')
 
