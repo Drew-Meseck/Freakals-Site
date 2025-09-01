@@ -48,8 +48,14 @@ WSGI_APPLICATION = 'src.project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'D:/Repositories/Freakals-Site/db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ygo_db',
+        'USER': 'ygo_db',
+        'PASSWORD': 'ygo_db',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'ATOMIC_REQUESTS': True,
+        'CONN_MAX_AGE': 0,
     }
 }
 

@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: ygo-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ygo_db
+      POSTGRES_PASSWORD: ygo_db
+      POSTGRES_DB: ygo_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
+    driver: local
