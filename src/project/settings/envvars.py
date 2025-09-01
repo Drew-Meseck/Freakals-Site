@@ -2,7 +2,7 @@
 This takes env variables with a matching prefix, strips out the prefix, and adds it to global
 
 For example:
-export FREAKSETTING_IN_DOCKER=true (environment variable)
+export FREAKSETTINGS_IN_DOCKER=true (environment variable)
 
 could then be referenced as a global as:
 IN_DOCKER with a value of True
