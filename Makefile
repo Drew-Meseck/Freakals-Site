@@ -10,8 +10,8 @@ run-server:
 migrate:
 	poetry run python -m src.manage migrate
 
-.PHONY: migragions
-migragions:
+.PHONY: migrations
+migrations:
 	poetry run python -m src.manage makemigrations
 
 .PHONY: createsuperuser
@@ -32,7 +32,7 @@ lint:
 .PHONY: up-dependencies-lin
 up-dependencies-lin:
 	test -f .env || touch .env
-	docker compose -f docker-compose.dev.yml up --force-reacreate db
+	docker compose -f docker-compose.dev.yml up --force-recreate db
 
 .PHONY: up-dependencies-win
 up-dependencies-win:
