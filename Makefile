@@ -10,8 +10,8 @@ run-server:
 migrate:
 	poetry run python -m src.manage migrate
 
-.PHONY: migragions
-migragions:
+.PHONY: migrations
+migrations:
 	poetry run python -m src.manage makemigrations
 
 .PHONY: createsuperuser

@@ -12,6 +12,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'src.project.scraping',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,9 @@ DATABASES = {
         'PORT': '5432',
         'ATOMIC_REQUESTS': True,
         'CONN_MAX_AGE': 0,
+        "OPTIONS": {
+            "options": "-c search_path=ygodb,public"
+        },
     }
 }
 
